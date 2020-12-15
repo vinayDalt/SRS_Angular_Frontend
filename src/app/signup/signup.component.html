@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div fxLayoutAlign="center center" fxFlexFill>
+    <mat-card fxFlex="30">
+           <form fxLayoutAlign="stretch" fxLayout="column">
+        <h1 mat-card-title>SignUp</h1>
+        <mat-form-field >
+            <input matInput placeholder="username"  name="username">
+       </mat-form-field>
+       <mat-form-field >
+        <input matInput placeholder="email"  name="email">
+   </mat-form-field>
+   <mat-form-field >
+     
+    <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
+    <input matInput placeholder="city"  name="city">
+  
+    </mat-form-field>
+        <mat-form-field >
+          <input matInput  type = "password" placeholder="password"  name="password">
+     </mat-form-field>
+     <button mat-raised-button color="primary" type="submit">Register Now</button>
+     <br>
+     <div>
+     <p>Already have an account? <a href="login" (click)="reRouteLogin()">Login</a>
+      <!-- <button mat-raised-button  color="warn">SignUp</button> -->
+    </p>
+  </div>
+      </form>
+    </mat-card>
+  </div>

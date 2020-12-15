@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div fxLayoutAlign="center center" fxFlexFill>
+  <mat-card fxFlex="30">
+   
+    <form fxLayoutAlign="stretch" fxLayout="column">
+      <h1 mat-card-title>Login</h1>
+      <mat-form-field >
+          <input matInput placeholder="username"  name="username">
+     </mat-form-field>
+    
+     <mat-form-field >
+      <input matInput  type = "password" placeholder="password"  name="password">
+ </mat-form-field>
+ <div mat-dialog-actions align="end">
+
+	<button mat-raised-button  color ="black" cdkFocusInitial>submit</button>
+</div>
+<div>
+	<p>Not a registered user? <br>
+		<button mat-raised-button (click)="redirectSignup()" color="warn">SignUp</button>
+	</p>
+</div>
+      </form>
+  </mat-card>
+</div>

@@ -1,0 +1,25 @@
+mat-grid-tile {
+    background: lightblue;
+  }
+
+  .container{
+    margin: 15px;
+    height:200px;
+  
+   }
+
+   .create-header-image {
+    background-image: url('https://material.angular.io/assets/img/create.png');
+    background-size: cover;
+  }
+
+  .view-header-image {
+    background-image: url('https://material.angular.io/assets/img/view.png');
+    background-size: cover;
+  }
+
+  .help-image {
+    /* background-image: url('https://material.angular.io/assets/img/help.png'); */
+    /* background-image: src("assets/img/IBM.png"); */
+    background-size: cover;
+  }

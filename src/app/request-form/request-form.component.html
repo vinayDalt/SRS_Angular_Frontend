@@ -1,0 +1,138 @@
+
+<div>
+    <mat-card class="form-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Request Ticket</mat-card-title>
+        <mat-card-subtitle>Originated by</mat-card-subtitle>
+      </mat-card-header>
+       </mat-card> 
+   </div>
+   <span>Required fields are marked with an (*) and must be filled in to complete the form</span>
+  <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Information:</ng-template>
+        <mat-form-field>
+          <mat-label>Request against system</mat-label>
+          <input matInput  formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Description</ng-template>
+        <mat-form-field>
+          <mat-label>Short Description</mat-label>
+          <input matInput formControlName="secondCtrl" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Full Description</mat-label>
+          <input matInput formControlName="secondCtrl" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Severity</mat-label>
+          <input matInput formControlName="secondCtrl" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Root Cause</mat-label>
+          <input matInput formControlName="secondCtrl" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Resolved By</mat-label>
+          <input matInput formControlName="secondCtrl" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Date Problem Resolved</mat-label>
+          <input matInput formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="thirdFormGroup">
+      <form [formGroup]="thirdFormGroup">
+        <ng-template matStepLabel>All Inputs</ng-template>
+        <mat-form-field>
+          <mat-label>Input Log</mat-label>
+          <input matInput formControlName="thirdCtrl" required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <mat-label>Enter Comment</mat-label>
+          <input matInput formControlName="thirdCtrl" required>
+        </mat-form-field>
+             
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="fourthFormGroup">
+      <form [formGroup]="fourthFormGroup">
+        <ng-template matStepLabel>Advisors</ng-template>
+        <mat-form-field>
+          <mat-label>Names of Advisors</mat-label>
+          <input matInput formControlName="fourthCtrl" required>
+        </mat-form-field>
+                     
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="fifthFormGroup">
+      <form [formGroup]="fifthFormGroup">
+        <ng-template matStepLabel>Additional Notifictions</ng-template>
+        <mat-form-field>
+          <mat-label>Additional Notification</mat-label>
+          <input matInput formControlName="fifthCtrl" required>
+        </mat-form-field>
+                     
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="sixthFormGroup">
+      <form [formGroup]="sixthFormGroup">
+        <ng-template matStepLabel>Email Records</ng-template>
+        <mat-form-field>
+          <mat-label>Email Log</mat-label>
+          <input matInput formControlName="sixthCtrl" required>
+        </mat-form-field>
+                     
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-vertical-stepper>
