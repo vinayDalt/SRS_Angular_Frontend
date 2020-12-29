@@ -24,6 +24,7 @@
     background-color: black;
     color: white;
     font-weight: 600;
+
   }
 
   .toolbar img {
@@ -33,11 +34,13 @@
     display: table-cell;
     width: 490px;
   }
+  .home-button{
+    margin-left: 50px;
+  }
   
   .example-button-row .mat-button-base {
     margin: 8px 8px 8px 0;
-    
-    
+        
   }
   
   .example-flex-container {
@@ -53,6 +56,9 @@
   }
   .mat-fab-button{
     justify-content: right;
-    margin-left: 900px;
+    background-position: right;
+    margin-left: 1000px;
+    
+    
   }
   

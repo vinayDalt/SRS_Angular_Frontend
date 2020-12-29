@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-request-form',
@@ -7,6 +8,8 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./request-form.component.css']
 })
 export class RequestFormComponent implements OnInit {
+
+  selected = 'option2';
 
   isLinear = false;
   firstFormGroup: FormGroup;
@@ -16,9 +19,31 @@ export class RequestFormComponent implements OnInit {
   fifthFormGroup: FormGroup;
   sixthFormGroup: FormGroup;
   
-
-
+  
   constructor(private _formBuilder: FormBuilder) { }
+
+  // @Output()formValues = new EventEmitter();
+
+  sendToView(){
+
+      let arr=[];
+    arr.push(this.short_description);
+    arr.push(this.description);
+    arr.push(this.severity);
+    arr.push(this.root_cause);
+    arr.push(this.resolved_by);
+    arr.push(this.date_problem_resolved);
+    arr.push(this.input_log);
+    arr.push(this.comments);
+    arr.push(this.advisors);
+    arr.push(this.additional_notification);
+    arr.push(this.email);
+
+    // return arr;
+    console.log(arr);
+
+    // this.formValues.emit(this.short_description);
+  }
 
   ngOnInit(): void {
     this.firstFormGroup = this._formBuilder.group({
@@ -41,4 +66,24 @@ export class RequestFormComponent implements OnInit {
     });
   }
 
+  // request_aginst_system : any;
+  short_description : any;
+  description : any;
+  severity : any;
+  root_cause : any;
+  resolved_by : any;
+  date_problem_resolved: any;
+  input_log : any;
+  comments : any;
+  advisors : any;
+  additional_notification : any;
+  email : any;
+
 }
+
+
+    
+  
+
+
+

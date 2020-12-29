@@ -7,9 +7,14 @@
       src="assets/img/IBM.png"   
        />
     <span>System Management Database</span>
+
+    <button mat-button class="home-button" color="basic" (click)="routeToHome()">Home</button> 
+
+    <button mat-button class="logout-button" *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" color="basic" >Logout</button> 
+
     
-        <button  mat-fab  color="basic" (click)="routeToLogin()"  class="mat-fab-button" aria-label="Example icon button with a login icon">
-        <mat-icon>login</mat-icon>
+        <button mat-mini-fab  color="basic" (click)="routeToLogin()"  *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" class="mat-fab-button">
+        <mat-icon>account_circle</mat-icon>
         </button>
     
   </div> 

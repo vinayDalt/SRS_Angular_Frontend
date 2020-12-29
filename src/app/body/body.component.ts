@@ -18,4 +18,12 @@ export class BodyComponent implements OnInit {
     this.router.navigate(['request-form'])
   }
 
+  helpRoute(){
+    this.router.navigate(['help'])
+  }
+
+  redirectView(){
+    this.router.navigate(['view'])
+  }
+
 }

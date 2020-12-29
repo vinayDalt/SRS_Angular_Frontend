@@ -1,0 +1,12 @@
+.mat-card-top-help{
+    margin-top: 70px;
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.bottom-card{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

@@ -21,8 +21,13 @@ import { SignupComponent } from './signup/signup.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { RequestFormComponent } from './request-form/request-form.component';
 import {MatStepperModule} from '@angular/material/stepper';
-
-
+import { HelpComponent } from './help/help.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTreeModule} from '@angular/material/tree';
+import {MatExpansionModule} from '@angular/material/expansion';
+import { FooterComponent } from './footer/footer.component';
+import { ViewComponent } from './view/view.component';
+import {MatTableModule} from '@angular/material/table';
 
 
 
@@ -33,7 +38,10 @@ import {MatStepperModule} from '@angular/material/stepper';
     HeaderComponent,
     LoginComponent,
     SignupComponent,
-    RequestFormComponent
+    RequestFormComponent,
+    HelpComponent,
+    FooterComponent,
+    ViewComponent
 
   ],
   imports: [
@@ -52,7 +60,12 @@ import {MatStepperModule} from '@angular/material/stepper';
     FlexLayoutModule,
     MatGridListModule,
     MatStepperModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatTreeModule,
+    MatExpansionModule,
+    MatTableModule
+
 
   ],
   providers: [],

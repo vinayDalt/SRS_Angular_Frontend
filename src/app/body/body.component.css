@@ -8,7 +8,38 @@ mat-grid-tile {
   
    }
 
-   .create-header-image {
+   .mat-card-top-header{
+
+    margin-bottom: 50px; 
+    margin-top: 70px;
+    
+    
+    
+   }
+   .example-card1{
+    max-width: 400px;
+     margin-left: 50px;
+    margin-right: 20px;
+     margin-bottom: 50px; 
+     
+   }
+
+   .example-card2{
+    max-width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+     margin-bottom: 50px; 
+     
+   }
+   .example-card3{
+    max-width: 400px;
+    margin-left: 20px;
+    margin-right: 50px;
+     margin-bottom: 50px; 
+        }
+
+
+   /* .create-header-image {
     background-image: url('https://material.angular.io/assets/img/create.png');
     background-size: cover;
   }
@@ -21,5 +52,5 @@ mat-grid-tile {
   .help-image {
     /* background-image: url('https://material.angular.io/assets/img/help.png'); */
     /* background-image: src("assets/img/IBM.png"); */
-    background-size: cover;
-  }
+    
+  

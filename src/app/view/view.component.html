@@ -1,0 +1,35 @@
+
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- <app-request-form (sendToView)="dataFromForm($event)"></app-request-form> -->
+  <!-- Position Column -->
+  <ng-container matColumnDef="date">
+    <mat-header-cell *matHeaderCellDef> date </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.date}} </mat-cell>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="severity">
+    <mat-header-cell *matHeaderCellDef> severity </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.severity}} </mat-cell>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="advisors">
+    <mat-header-cell *matHeaderCellDef> advisors </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.advisors}} </mat-cell>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="short description">
+    <mat-header-cell *matHeaderCellDef> short description </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.short_description}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> email </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

@@ -2,21 +2,36 @@
 <div>
     <mat-card class="form-card">
       <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
+        <div mat-card-avatar class="example-header-image"></div> 
         <mat-card-title>Request Ticket</mat-card-title>
         <mat-card-subtitle>Originated by</mat-card-subtitle>
       </mat-card-header>
        </mat-card> 
    </div>
    <span>Required fields are marked with an (*) and must be filled in to complete the form</span>
-  <mat-vertical-stepper [linear]="isLinear" #stepper>
+    <mat-vertical-stepper [linear]="isLinear" #stepper>
     <mat-step [stepControl]="firstFormGroup">
       <form [formGroup]="firstFormGroup">
         <ng-template matStepLabel>Information:</ng-template>
         <mat-form-field>
-          <mat-label>Request against system</mat-label>
-          <input matInput  formControlName="firstCtrl" required>
-        </mat-form-field>
+          <mat-label >Request against system</mat-label>
+          <input  matInput formControlName="firstCtrl" required>
+          <mat-select  [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="option1">Create Material Master in SAP</mat-option>
+            <mat-option value="option2">EDI</mat-option>
+            <mat-option value="option3">OSC WI</mat-option>
+            <mat-option value="option4">Rosettanet</mat-option>
+            <mat-option value="option5">SAP</mat-option>
+            <mat-option value="option6">SAP Exclusion Table</mat-option>
+            <mat-option value="option7">SAP IDs and Profiles</mat-option>
+            <mat-option value="option8">SAP MDT</mat-option>
+            <mat-option value="option9">SAP Purchasing Group</mat-option>
+            <mat-option value="option8">Storage Local Extension</mat-option>
+            <mat-option value="option9">Others</mat-option>
+          </mat-select>
+          </mat-form-field>
+        
         <div>
           <button mat-button matStepperNext>Next</button>
         </div>
@@ -27,32 +42,32 @@
         <ng-template matStepLabel>Description</ng-template>
         <mat-form-field>
           <mat-label>Short Description</mat-label>
-          <input matInput formControlName="secondCtrl" required>
+          <input [(ngModel)]="short_description" matInput formControlName="secondCtrl" required>
         </mat-form-field>
         <br>
         <mat-form-field>
           <mat-label>Full Description</mat-label>
-          <input matInput formControlName="secondCtrl" required>
+          <input [(ngModel)]="description" matInput formControlName="secondCtrl" required>
         </mat-form-field>
         <br>
         <mat-form-field>
           <mat-label>Severity</mat-label>
-          <input matInput formControlName="secondCtrl" required>
+          <input [(ngModel)]="severity" matInput formControlName="secondCtrl" required>
         </mat-form-field>
         <br>
         <mat-form-field>
           <mat-label>Root Cause</mat-label>
-          <input matInput formControlName="secondCtrl" required>
+          <input [(ngModel)]="root_cause" matInput formControlName="secondCtrl" required>
         </mat-form-field>
         <br>
         <mat-form-field>
           <mat-label>Resolved By</mat-label>
-          <input matInput formControlName="secondCtrl" required>
+          <input [(ngModel)]="resolved_by" matInput formControlName="secondCtrl" required>
         </mat-form-field>
         <br>
         <mat-form-field>
           <mat-label>Date Problem Resolved</mat-label>
-          <input matInput formControlName="secondCtrl" required>
+          <input [(ngModel)]="date_problem_resolved" matInput formControlName="secondCtrl" required>
         </mat-form-field>
         <div>
           <button mat-button matStepperPrevious>Back</button>
@@ -66,12 +81,12 @@
         <ng-template matStepLabel>All Inputs</ng-template>
         <mat-form-field>
           <mat-label>Input Log</mat-label>
-          <input matInput formControlName="thirdCtrl" required>
+          <input [(ngModel)]="input_log" matInput formControlName="thirdCtrl" required>
         </mat-form-field>
         <br>
         <mat-form-field>
           <mat-label>Enter Comment</mat-label>
-          <input matInput formControlName="thirdCtrl" required>
+          <input  [(ngModel)]="comments" matInput formControlName="thirdCtrl" required>
         </mat-form-field>
              
         <div>
@@ -87,7 +102,7 @@
         <ng-template matStepLabel>Advisors</ng-template>
         <mat-form-field>
           <mat-label>Names of Advisors</mat-label>
-          <input matInput formControlName="fourthCtrl" required>
+          <input [(ngModel)]="advisors" matInput formControlName="fourthCtrl" required>
         </mat-form-field>
                      
         <div>
@@ -102,7 +117,7 @@
         <ng-template matStepLabel>Additional Notifictions</ng-template>
         <mat-form-field>
           <mat-label>Additional Notification</mat-label>
-          <input matInput formControlName="fifthCtrl" required>
+          <input [(ngModel)]="additional_notification" matInput formControlName="fifthCtrl" required>
         </mat-form-field>
                      
         <div>
@@ -117,7 +132,7 @@
         <ng-template matStepLabel>Email Records</ng-template>
         <mat-form-field>
           <mat-label>Email Log</mat-label>
-          <input matInput formControlName="sixthCtrl" required>
+          <input [(ngModel)]="email" matInput formControlName="sixthCtrl" required>
         </mat-form-field>
                      
         <div>
@@ -133,6 +148,7 @@
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-raised-button color="primary" (click)="sendToView()">Save as Draft</button>
       </div>
     </mat-step>
   </mat-vertical-stepper>

@@ -8,11 +8,17 @@
 
   .form-card{
     border:2px solid rgb(12, 11, 11);
+    margin-top: 70px;
   }
 
   .example-header-image {
     background-image: url('https://www.investopedia.com/thmb/zes2hNHtMmFNAQZ8VgUb6p-8MzI=/1783x1265/filters:no_upscale():max_bytes(150000):strip_icc()/ibm-logo-3-56a81a2c3df78cf7729c1f61.jpg');
     background-size: cover;
+    
   }
+
+  
+
+ 
 
   

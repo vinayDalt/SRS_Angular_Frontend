@@ -1,20 +1,21 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 
 <div fxLayoutAlign="center center" fxFlexFill>
   <mat-card fxFlex="30">
    
     <form fxLayoutAlign="stretch" fxLayout="column">
       <h1 mat-card-title>Login</h1>
+      <h3 *ngIf='invalidLogin'>{{errorMessage}}</h3>
       <mat-form-field >
-          <input matInput placeholder="username"  name="username">
+          <input matInput placeholder="username"  name="username" [(ngModel)]="username">
      </mat-form-field>
     
      <mat-form-field >
-      <input matInput  type = "password" placeholder="password"  name="password">
+      <input matInput type ="password" placeholder="password"  name="password" [(ngModel)]="password">
  </mat-form-field>
  <div mat-dialog-actions align="end">
 
-	<button mat-raised-button  color ="black" cdkFocusInitial>submit</button>
+	<button mat-raised-button (click)="handleLogin()" color ="black" cdkFocusInitial>submit</button>
 </div>
 <div>
 	<p>Not a registered user? <br>
@@ -24,3 +25,5 @@
       </form>
   </mat-card>
 </div>
+
+

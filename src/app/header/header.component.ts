@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HardcodedAuthenticationService } from '../service/hardcoded-authentication.service';
 
 
 
@@ -12,16 +13,24 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
+  // isUserLoggedIn: boolean=false;
+
   constructor( 
-         private router : Router
+         private router : Router, public hardcodedAuthenticationService
+         :HardcodedAuthenticationService
            ) { }
     
       ngOnInit(): void {
+        // this.isUserLoggedIn = this.hardcodedAuthenticationService.isUserLoggedIn();
          }
   
          routeToLogin(){
            this.router.navigate(['login'])
          }
+
+         routeToHome(){
+          this.router.navigate([''])
+        }
 }
   
 

@@ -1,14 +1,13 @@
 
-<app-header></app-header>
-<br>
-<br>
-<br>
-
+<!-- <app-header></app-header> -->
 <div>
- <mat-card>
-     <h3>
-        The Systems Management Database tool is used for flagging requests or issues encountered which requires the support of the Systems Solutions Team except for STC eTools.
-     </h3>
+ <mat-card class="mat-card-top-header">
+    <mat-card-header>
+        <mat-card-title >Tool Description</mat-card-title>
+    <mat-card-subtitle>
+        The Systems Management Database is a Lotus Notes Database for flagging requests or issues encountered which requires the support of the Systems Solutions Team except for STC eTools. This allows tracking of status for requests or issues resolution.
+   </mat-card-subtitle>
+    </mat-card-header>
     </mat-card> 
 </div>
 
@@ -19,6 +18,7 @@
                     <div mat-card-avatar class="create-header-image"></div>
                     <mat-card-title>Create Request</mat-card-title>
                 </mat-card-header>
+                <img mat-card-image src="assets/img/create.jpg"  alt="Photo of create">
                 <mat-card-content>
                     <p>
                        This section contains form page which is used to create request for Systm Management Database
@@ -34,36 +34,33 @@
                     <div mat-card-avatar class="view-header-image"></div>
                     <mat-card-title>View Request</mat-card-title>
                 </mat-card-header>
+                <img mat-card-image src="assets/img/view.jpg"  alt="Photo of view">
                 <mat-card-content>
                     <p>
                         View Page gives all the requests created in System Management Database.
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary">View</button>
+                    <button mat-raised-button color="primary" (click)="redirectView()">View</button>
                     
                 </mat-card-actions>
             </mat-card>
             <mat-card class="example-card3">
                 <mat-card-header>
-                    <div mat-card-avatar class="help-image">  <img
-                        width="30"
-                        height="30"
-                        alt="help Logo"
-                        src="assets/img/help.png"   
-                         /></div>
-                  
-                    <mat-card-title>Help</mat-card-title>
+                    <div mat-card-avatar class="help-image">  </div>
+                   <mat-card-title>Help</mat-card-title>
                 </mat-card-header>
+                <img mat-card-image src="assets/img/help.jpg"  alt="Photo of help">
                 <mat-card-content>
                     <p>
                         Help Page gives complete information on Usage of System Management Database
                     </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-raised-button color="primary">Help</button>
+                    <button mat-raised-button color="primary" (click)="helpRoute()">Help</button>
                     
                 </mat-card-actions>
             </mat-card>
         </div>
     </div>
+    
